@@ -55,6 +55,18 @@ const App: FC = () => {
   useEffect(() => {
     consoleInfo(pkg.name, pkg.repository.url)
     consoleInfo(`@${pkg.author.name}`, pkg.author.url)
+
+    const script = document.createElement('script');
+    script.src = 'https://umami.flyweb.cn/script.js'
+    script.defer = true;
+    script.setAttribute(
+      'data-website-id',
+      'c2066589-5cb4-405a-a093-6b154f81595d',
+    )
+    document.head.appendChild(script)
+    return () => {
+      document.head.removeChild(script)
+    }
   }, [])
 
   return (
