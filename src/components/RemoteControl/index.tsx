@@ -101,6 +101,7 @@ const RemoteControl: React.FC = () => {
         {' '}
         <RCButton
           aria-label="cold"
+          data-umami-event="开冷风"
           style={{
             color: 'white',
             backgroundColor: blue[700],
@@ -113,6 +114,7 @@ const RemoteControl: React.FC = () => {
         </RCButton>
         <RCButton
           aria-label="add"
+          data-umami-event="开关机"
           onClick={() => {
             toggleAC(ac.status)
             toggleStatus()
@@ -126,6 +128,7 @@ const RemoteControl: React.FC = () => {
         </RCButton>
         <RCButton
           aria-label="hot"
+          data-umami-event="开热风"
           style={{ backgroundColor: 'orange', color: 'white' }}
           onClick={() => {
             toggleMode('hot')
@@ -135,12 +138,14 @@ const RemoteControl: React.FC = () => {
         </RCButton>
       </div>
       <RCButton
+        data-umami-event="升高"
         aria-label="add"
         onClick={increase}
       >
         <div className="i-mdi-triangle-small-up text-4xl" />
       </RCButton>
       <RCButton
+        data-umami-event="降低温度"
         aria-label="reduce"
         onClick={decrease}
       >
