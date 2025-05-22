@@ -40,18 +40,18 @@ const Home: React.FC = () => {
           temperature={ac.temperature}
           mode={ac.mode}
         />
-        <div className="text-center">
-          <div className="mt-2">
-            <Button
-              variant="outlined"
-              onClick={() => {
-                window.open('/rc', '_blank', 'width=300, height=400')
-              }}
-            >
-              独立遥控器
-            </Button>
-          </div>
-        </div>
+        {/*<div className="text-center">*/}
+        {/*  <div className="mt-2">*/}
+        {/*    <Button*/}
+        {/*      variant="outlined"*/}
+        {/*      onClick={() => {*/}
+        {/*        window.open('/rc', '_blank', 'width=300, height=400')*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      独立遥控器*/}
+        {/*    </Button>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         <RemoteControl />
       </div>
 

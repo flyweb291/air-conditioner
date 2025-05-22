@@ -21,7 +21,7 @@ export const acColor = {
 const AcBorder: React.FC<React.PropsWithChildren> = (props) => {
   return (
     <div
-      className="bg-white h-38 shadow relative"
+      className="bg-white h-40 shadow relative"
       style={{
         border: `1px solid ${acColor.border}`,
         borderRadius: 10,
@@ -39,20 +39,20 @@ const AcBorder: React.FC<React.PropsWithChildren> = (props) => {
  */
 const AcLogo: React.FC = () => {
   return (
-    <div className="text-center mt-28">
+    <div className="text-center mt-24">
       <a
         className="block"
-        href={pkg.repository.url}
+        href="https://mi.com"
         title={pkg.description}
         target="_blank"
         rel="noreferrer noopener"
       >
         <img
-          className="m-auto"
+          className="ml-10px"
           style={{
-            width: 12,
+            height: 24,
           }}
-          src="/yun-logo.svg"
+          src="/logo-mi2.png"
           alt="logo"
         />
       </a>
@@ -77,7 +77,7 @@ const AcStatus: React.FC<{ status: boolean }> = (props) => {
 
   return (
     <div
-      className="absolute h-1 w-1 rounded-full top-32 right-2"
+      className="absolute h-1 w-1 rounded-full top-33 right-2"
       style={{
         backgroundColor: led.backgroundColor || 'transparent',
       }}
@@ -126,7 +126,7 @@ const AirConditioner: React.FC<{
         <AirOutlet />
         <AcStatus status={props.status} />
         <EnergyLabel titleLength={6} />
-        {import.meta.env.VITE_DISABLE_ADSENSE ? null : <EnergySavingLabel />}
+        {/*{import.meta.env.VITE_DISABLE_ADSENSE ? null : <EnergySavingLabel />}*/}
       </AcBorder>
       <Fade in={props.status}>
         <WindEffect />

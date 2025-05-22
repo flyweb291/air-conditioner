@@ -38,7 +38,7 @@ export function useAcTemperature() {
       dispatchToast({
         type: 'update',
         payload: {
-          message: '已经是最小温度啦！',
+          message: '感冒了找王老师买感冒药～',
           open: true,
           severity: 'error',
         },
